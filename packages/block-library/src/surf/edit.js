@@ -4,6 +4,10 @@
 import { RangeControl, PanelBody } from '@wordpress/components';
 import { InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
+/**
+ * Internal dependencies
+ */
+import Text from './text';
 
 const SurfEdit = ( { attributes, setAttributes } ) => {
 	const { waveHeight } = attributes;
@@ -14,8 +18,8 @@ const SurfEdit = ( { attributes, setAttributes } ) => {
 
 	return (
 		<>
-			<p style={ { fontSize: 20 + waveHeight + 'px' } }>🌊</p>
-			<p>Wave height: { waveHeight } ft</p>
+			<Text style={ { fontSize: 20 + waveHeight } }>🌊</Text>
+			<Text>Wave height: { waveHeight } ft</Text>
 			<InspectorControls>
 				<PanelBody title={ __( 'Surf settings' ) }>
 					<RangeControl
