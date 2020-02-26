@@ -49,7 +49,7 @@ export function AlignmentToolbar( props ) {
 	return (
 		<Toolbar
 			isCollapsed={ isCollapsed }
-			icon={ activeAlignment ? activeAlignment.icon : 'editor-alignleft' }
+			icon={ activeAlignment ? activeAlignment.icon : alignLeft }
 			label={ label }
 			controls={ alignmentControls.map( ( control ) => {
 				const { align } = control;
