@@ -226,7 +226,7 @@ const BlockComponent = forwardRef(
 	}
 );
 
-const elements = [ 'p', 'div' ];
+const elements = [ 'p', 'div', 'ol', 'ul' ];
 
 const ExtendedBlockComponent = elements.reduce( ( acc, element ) => {
 	acc[ element ] = forwardRef( ( props, ref ) => {
